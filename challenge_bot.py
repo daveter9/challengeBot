@@ -49,4 +49,4 @@ async def ping():
 #starts the background tasks in another loop
 bot.loop.create_task(background_task())
 #starts the bot, you need to put in your bot token here obtained by discord
-bot.run('MjE5NDYzNjQzNDYzNDE3ODY2.CqSuYQ.4CFK-iwqvh86mpiztTEsdNx410M')
+bot.run('')
