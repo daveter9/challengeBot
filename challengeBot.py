@@ -2,17 +2,17 @@ import discord #import the discord.py lib
 from discord.ext import commands #import the commands extension
 import asyncio #import asyncio for the sleep function
 
+#description of the bot
 description ='''
 challengeBot is a discord bot that provides weekly coding challenges
 from /r/dailyprogrammer. Bot created by the fellows of /r/programming
-''' #description of the bot
+''' 
 
 #list of modules that the bot imports
-startup_extensions = ['testModule'] 
+startup_extensions = ['test_module'] 
 
 #init the bot class, the prefix for the commands, the bot description and help
 bot = commands.Bot(command_prefix='!', description=description, pm_help=True)
-
 
 #Makes a background task
 async def background_task():
