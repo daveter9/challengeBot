@@ -3,9 +3,9 @@ A discord bot that provides weekly coding challenges from /r/dailyprogrammer
 
 Every task in the todo list can be done by an individual, if you don't know the way
 discord works just make the function and I or someone else will rewrite it to
-fit into the discord bot. If you need to access a certain value provided by discord
-you can read the discord.py docs to get it or just ask it.  
---------
+fit into the discord bot. If you need to access a certain value provided by discord you can read the discord.py docs to get it or just ask it.
+
+---------
 ####Things to do:  
 * Scrape [/r/dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/) to get the challengeBot  
 * Parse the scraped challenge to a discord message  
