@@ -6,10 +6,10 @@ import asyncio #import asyncio for the sleep function
 description ='''
 challengeBot is a discord bot that provides weekly coding challenges
 from /r/dailyprogrammer. Bot created by the fellows of /r/programming
-''' 
+'''
 
 #list of modules that the bot imports
-startup_extensions = ['test_module'] 
+startup_extensions = ['test_module']
 
 #init the bot class, the prefix for the commands, the bot description and help
 bot = commands.Bot(command_prefix='!', description=description, pm_help=True)
@@ -23,7 +23,7 @@ async def background_task():
         #Bot prints 'I am alive' every 5 seconds to your console
         print('I am alive')
         await asyncio.sleep(5)
-        
+
 @bot.event
 #triggers when the bot is done loading
 async def on_ready():
@@ -48,5 +48,5 @@ async def ping():
 
 #starts the background tasks in another loop
 bot.loop.create_task(background_task())
-#starts the bot, you need to put in your bot token here obtained by discord    
-bot.run('')
+#starts the bot, you need to put in your bot token here obtained by discord
+bot.run('MjE5NDYzNjQzNDYzNDE3ODY2.CqSuYQ.4CFK-iwqvh86mpiztTEsdNx410M')
