@@ -17,13 +17,15 @@ class Scraper:
         '''
         Gets newest submmisions from /r/ dailyprogrammer
         :param difficulty: Easy, Intermediate, Hard
-        :return:  
+        :return:
         '''
+        submission_links=[]
         subreddit = self.r.get_subreddit('dailyprogrammer')
         for submission in subreddit.get_hot(limit=10):
             if submission.id not in self.already_done and self._check(difficulty,submission.title):
-                print(submission.title)
+                submission_links.append(submission.permalink)
                 self.already_done.append(submission.id)
+        return submission_links
 
 
     def _check(self,difficulty,title):
@@ -32,7 +34,9 @@ class Scraper:
         return rg.search(title)
 
 a=  Scraper()
-a.get_newest('Intermediate')
+submission_links= a.get_newest('Easy')
+
+
 
 
 
