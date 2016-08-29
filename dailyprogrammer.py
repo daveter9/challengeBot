@@ -33,10 +33,6 @@ class Scraper:
         rg = re.compile(regex_easy,re.IGNORECASE | re.DOTALL)
         return rg.search(title)
 
-a=  Scraper()
-submission_links= a.get_newest('Easy')
-
-
 
 
 

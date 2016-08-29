@@ -1,6 +1,7 @@
 import discord #import the discord.py lib
 from discord.ext import commands #import the commands extension
 import asyncio #import asyncio for the sleep function
+import dailyprogrammer
 
 #description of the bot
 description ='''
@@ -46,7 +47,15 @@ async def ping():
     #await is a asyncio keyword and bot.say types something out in discord
     await bot.say('pong')
 
+@bot.command(description='Loads a dailyprogammer challenge')
+async def challenge():
+    loop = asyncio.get_event_loop()
+    scrape = dailyprogrammer.Scraper()
+    challenge = await loop.run_in_executor(None,
+                                           scrape.get_newest)
+    await bot.say(challenge[0])
+
 #starts the background tasks in another loop
-bot.loop.create_task(background_task())
+##bot.loop.create_task(background_task())
 #starts the bot, you need to put in your bot token here obtained by discord
 bot.run('')
