@@ -6,7 +6,7 @@ discord works just make the function and I or someone else will rewrite it to
 fit into the discord bot. If you need to access a certain value provided by discord you can read the discord.py docs to get it or just ask it.
 
 ---------
-####Things to do:  
+#### Things to do:  
 * Scrape [/r/dailyprogrammer](https://www.reddit.com/r/dailyprogrammer/) to get the challengeBot  
 * Parse the scraped challenge to a discord message  
 * Check that a challenge isn't posted on the server before(maybe a database with SQlite or something)  
